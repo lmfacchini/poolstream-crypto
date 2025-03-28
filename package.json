@@ -1,0 +1,30 @@
+{
+  "name": "@poolstream/signer",
+  "version": "1.0.0",
+  "description": "Transaction signer for multiple blockchains.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lmfacchini/poolstream-signer.git"
+  },
+  "keywords": [
+    "multi",
+    "blockchain",
+    "bitcoin",
+    "btc",
+    "stellar",
+    "ripple",
+    "tron",
+    "trx",
+    "xlm"
+  ],
+  "author": "Leonardo Marquini Facchini",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/lmfacchini/poolstream-signer/issues"
+  },
+  "homepage": "https://github.com/lmfacchini/poolstream-signer#readme"
+}
