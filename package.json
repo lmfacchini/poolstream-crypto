@@ -1,14 +1,18 @@
 {
-  "name": "@poolstream/signer",
+  "name": "@poolstream/offline",
   "version": "1.0.0",
-  "description": "Transaction signer for multiple blockchains.",
-  "main": "index.js",
+  "description": "Transaction signer and create wallets for multiple blockchains.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "module": "module",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lmfacchini/poolstream-signer.git"
+    "url": "git+ssh://git@github.com/lmfacchini/poolstream-offline.git"
   },
   "keywords": [
     "multi",
@@ -24,7 +28,25 @@
   "author": "Leonardo Marquini Facchini",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/lmfacchini/poolstream-signer/issues"
+    "url": "https://github.com/lmfacchini/poolstream-offline/issues"
   },
-  "homepage": "https://github.com/lmfacchini/poolstream-signer#readme"
+  "homepage": "https://github.com/lmfacchini/poolstream-offline#readme",
+  "dependencies": {
+    "@stellar/stellar-sdk": "^13.2.0",
+    "crc": "^4.3.2",
+    "ripple-address-codec": "^5.0.0",
+    "ripple-keypairs": "^2.0.0",
+    "tronweb": "^5.3.3",
+    "typescript": "^5.8.2",
+    "xrpl": "^4.2.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/node": "^22.14.0",
+    "axios": "^1.8.4",
+    "expo-random": "^14.0.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.1",
+    "tslib": "^2.8.1"
+  }
 }
