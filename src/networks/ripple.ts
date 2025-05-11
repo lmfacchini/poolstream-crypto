@@ -1,9 +1,9 @@
-import { Blockchain, Wallet } from "./blockchain";
+import { Blockchain, SignableTransaction, Wallet } from "./blockchain";
 
 import { deriveAddress, deriveKeypair, generateSeed } from "ripple-keypairs";
 import { RippleWallet } from "./ripple.types";
 
-export class Ripple implements Blockchain {
+export class Ripple implements Blockchain<SignableTransaction, string> {
   async generateWallet(): Promise<Wallet> {
     const seed = generateSeed();
 
@@ -18,9 +18,12 @@ export class Ripple implements Blockchain {
     };
   }
 
-  async signTransaction(transaction: any, secret: string): Promise<any> {
+  async signTransaction(
+    transaction: SignableTransaction,
+    secret: string
+  ): Promise<SignableTransaction> {
     const wallet = RippleWallet.fromSeed(secret);
-
-    return wallet.sign(transaction);
+    transaction.natural = wallet.sign(transaction.natural);
+    return transaction;
   }
 }

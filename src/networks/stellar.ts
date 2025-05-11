@@ -1,7 +1,7 @@
 import { Keypair, TransactionBuilder } from "@stellar/stellar-sdk";
-import { Blockchain, Wallet } from "./blockchain";
+import { Blockchain, StellarSignableTransaction, Wallet } from "./blockchain";
 
-export class Stellar implements Blockchain {
+export class Stellar implements Blockchain<StellarSignableTransaction, string> {
   async generateWallet(): Promise<Wallet> {
     const keypair = Keypair.random();
 
@@ -17,20 +17,19 @@ export class Stellar implements Blockchain {
   }
 
   async signTransaction(
-    serializedTransaction: any,
-    secret: string,
-    options: any = { networkPassphrase: "" }
-  ): Promise<any> {
+    signableTransaction: StellarSignableTransaction,
+    secret: string
+  ): Promise<StellarSignableTransaction> {
     const transaction = TransactionBuilder.fromXDR(
-      serializedTransaction as string,
-      options.networkPassphrase
+      signableTransaction.natural as string,
+      signableTransaction.networkPassphrase
     );
     const keypair = Keypair.fromSecret(secret);
 
     transaction.sign(keypair);
 
-    const signedSerializedTx = transaction.toXDR();
+    signableTransaction.natural = transaction.toXDR();
 
-    return signedSerializedTx;
+    return signableTransaction;
   }
 }

@@ -1,7 +1,7 @@
 import { describe, expect, test } from "@jest/globals";
 import { Stellar } from "../src/networks/stellar";
 import axios from "axios";
-import { Keypair } from "@stellar/stellar-sdk";
+import { Keypair, Networks } from "@stellar/stellar-sdk";
 
 // {
 //     privateKey: 'SBAD67GYF4HZ6JDUSO6W3OOC7KM5TAZ2NW635LJC3R32TO3EBPOYDB5T',
@@ -29,7 +29,8 @@ describe("Stellar network", () => {
 
     const signedTransactions = await stellar.signTransaction(
       response.data.transactions[0].natural,
-      "SBAD67GYF4HZ6JDUSO6W3OOC7KM5TAZ2NW635LJC3R32TO3EBPOYDB5T"
+      "SBAD67GYF4HZ6JDUSO6W3OOC7KM5TAZ2NW635LJC3R32TO3EBPOYDB5T",
+      { networkPassphrase: Networks.TESTNET }
     );
   });
   test("Stellar - Gerate Wallet", async () => {
