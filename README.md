@@ -10,6 +10,7 @@ Built for self-custody, multi-chain compatibility, and developer flexibility.
 - [Usage](#-usage)
   - [Generate Wallet](#generate-wallet)
   - [Sign Transaction](#sign-transaction)
+  - [Raw Node.Js](#raw-nodejs)
 - [Supported Blockchains](#-supported-blockchains)
 - [Security Notes](#-security-notes)
 - [Documentation](#-documentation)
@@ -74,7 +75,8 @@ let signedTransaction = await ripple.signTransaction(
 console.log(signedTransaction);
 ```
 
-### Raw Node
+### Raw Node.Js
+
 ```javascript
 const crypto = require("@poolstream/crypto");
 const ripple = new crypto.Ripple;
