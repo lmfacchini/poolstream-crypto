@@ -1,6 +1,6 @@
 {
-  "name": "@poolstream/offline",
-  "version": "1.0.0",
+  "name": "@poolstream/crypto",
+  "version": "1.0.0Beta",
   "description": "Transaction signer and create wallets for multiple blockchains.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lmfacchini/poolstream-offline.git"
+    "url": "git+ssh://git@github.com/lmfacchini/poolstream-crypto.git"
   },
   "keywords": [
     "multi",
@@ -28,9 +28,9 @@
   "author": "Leonardo Marquini Facchini",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lmfacchini/poolstream-offline/issues"
+    "url": "https://github.com/lmfacchini/poolstream-crypto/issues"
   },
-  "homepage": "https://github.com/lmfacchini/poolstream-offline#readme",
+  "homepage": "https://github.com/lmfacchini/poolstream-crypto#readme",
   "dependencies": {
     "@stellar/stellar-sdk": "^13.2.0",
     "crc": "^4.3.2",

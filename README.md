@@ -1,6 +1,6 @@
-# @poolstream/offline
+# @poolstream/crypto
 
-**A lightweight and secure library for generating wallets and signing cryptocurrency transactions offline.**  
+**A lightweight and secure library for generating wallets and signing cryptocurrency transactions.**  
 Built for self-custody, multi-chain compatibility, and developer flexibility.
 
 ## 📚 Table of Contents
@@ -19,7 +19,7 @@ Built for self-custody, multi-chain compatibility, and developer flexibility.
 ## ✨ Features
 
 - 🔐 Generate deterministic or random wallets
-- 📝 Sign transactions securely and offline
+- 📝 Sign transactions securely
 - 🌐 Multi-chain support (Ripple, Tron, Stellar, etc.)
 - 📦 Minimal dependencies, fast install
 - ✅ Works in Node.js environments
@@ -28,9 +28,9 @@ Built for self-custody, multi-chain compatibility, and developer flexibility.
 ## 🚀 Installation
 
 ```bash
-npm install @poolstream/offline
+npm install @poolstream/crypto
 # or
-yarn add @poolstream/offline
+yarn add @poolstream/crypto
 ```
 
 ## 📦 Usage
@@ -38,7 +38,7 @@ yarn add @poolstream/offline
 ### Generate Wallet
 
 ```typescript
-import { Ripple } from "@poolstream/offline";
+import { Ripple } from "@poolstream/crypto";
 
 let ripple = new Ripple();
 let wallet = await ripple.generateWallet();
@@ -50,7 +50,7 @@ console.log(`Wallet address: [${wallet.address}]`);
 ### Sign Transaction
 
 ```typescript
-import { Ripple } from "@poolstream/offline";
+import { Ripple } from "@poolstream/crypto";
 
 let ripple = new Ripple();
 
