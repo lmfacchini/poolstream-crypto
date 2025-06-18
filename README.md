@@ -74,6 +74,13 @@ let signedTransaction = await ripple.signTransaction(
 console.log(signedTransaction);
 ```
 
+### Raw Node
+```javascript
+const crypto = require("@poolstream/crypto");
+const ripple = new crypto.Ripple;
+console.log(ripple.generateWallet());
+```
+
 ## 🌍 Supported Blockchains
 
 The API design is extensible and provides a common interface for all supported blockchains:

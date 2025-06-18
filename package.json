@@ -25,11 +25,16 @@
     "trx",
     "xlm"
   ],
+  "files": [
+    "bin",
+    "build",
+    "dist"
+  ],
   "author": "Leonardo Marquini Facchini",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lmfacchini/poolstream-crypto/issues"
-  },
+  },  
   "homepage": "https://github.com/lmfacchini/poolstream-crypto#readme",
   "dependencies": {
     "@stellar/stellar-sdk": "^13.2.0",
